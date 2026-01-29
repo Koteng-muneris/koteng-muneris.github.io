@@ -12,76 +12,77 @@ body {
 /* NAVBAR */
 .navbar {
   background: #2fb3a2;
-  padding: 22px 40px;   /* DIPERBESAR */
+  padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav-left {
+.brand {
   display: flex;
   align-items: center;
-  gap: 16px;
-}
-
-.logo {
-  height: 52px;   /* LOGO DIPERBESAR */
-}
-
-.brand h1 {
-  font-size: 26px;
+  gap: 12px;
   color: white;
+  font-size: 22px;
 }
 
-.brand span {
-  font-size: 13px;
-  color: #eafffb;
+.brand img {
+  height: 42px;
 }
 
-.nav-menu a {
+.navbar nav a {
   color: white;
-  margin-left: 22px;
+  margin-left: 20px;
   text-decoration: none;
   font-size: 16px;
 }
 
-.nav-menu a.active,
-.nav-menu a:hover {
+.navbar nav a.active {
   text-decoration: underline;
 }
 
-/* BACKGROUND FOTO FULL */
-.bg-section {
-  background: url("bg.png") no-repeat center/cover;
+/* BACKGROUND FULL */
+.news-section {
+  background: url("bg.jpg") center/cover no-repeat;
   min-height: 100vh;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
-.content {
-  max-width: 900px;
+/* GRID BERITA */
+.news-grid {
+  max-width: 1100px;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
 }
 
-.post {
-  background: rgba(255,255,255,0.92);
-  padding: 28px;
-  margin-bottom: 26px;
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  cursor: pointer;
+  transition: transform .2s;
 }
 
-.category {
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.tag {
+  font-size: 12px;
   color: #2fb3a2;
-  font-size: 13px;
-  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.post h2 {
+.card h3 {
   margin: 10px 0;
-  font-size: 26px;
+  font-size: 18px;
 }
 
-.meta {
-  color: #666;
+.card p {
   font-size: 14px;
+  color: #555;
 }
 
 /* RESPONSIVE */
@@ -91,11 +92,7 @@ body {
     align-items: flex-start;
   }
 
-  .nav-menu {
-    margin-top: 12px;
-  }
-
-  .brand h1 {
-    font-size: 22px;
+  .navbar nav {
+    margin-top: 10px;
   }
 }
