@@ -2,18 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Georgia", serif;
+  font-family: Georgia, serif;
 }
 
 body {
-  background-color: #f5f5f5;
+  background: #000;
 }
 
 /* NAVBAR */
 .navbar {
-  background-color: #2fb3a2;
-  color: white;
-  padding: 14px 40px;
+  background: #2fb3a2;
+  padding: 22px 40px;   /* DIPERBESAR */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,59 +21,51 @@ body {
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .logo {
-  height: 40px;
+  height: 52px;   /* LOGO DIPERBESAR */
 }
 
-.brand-text h1 {
-  font-size: 20px;
+.brand h1 {
+  font-size: 26px;
+  color: white;
 }
 
-.brand-text p {
-  font-size: 12px;
-  opacity: 0.9;
+.brand span {
+  font-size: 13px;
+  color: #eafffb;
 }
 
 .nav-menu a {
   color: white;
+  margin-left: 22px;
   text-decoration: none;
-  margin-left: 20px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
-.nav-menu a:hover,
-.nav-menu a.active {
+.nav-menu a.active,
+.nav-menu a:hover {
   text-decoration: underline;
 }
 
-/* HERO */
-.hero {
-  background: #111;
-  color: #d4af37;
-  text-align: center;
+/* BACKGROUND FOTO FULL */
+.bg-section {
+  background: url("bg.png") no-repeat center/cover;
+  min-height: 100vh;
   padding: 80px 20px;
 }
 
-.hero h2 {
-  font-size: 42px;
-}
-
-/* CONTENT */
 .content {
   max-width: 900px;
-  margin: -40px auto 60px;
-  padding: 40px;
-  background: url("bg.png") no-repeat center/cover;
-  border-radius: 6px;
+  margin: auto;
 }
 
 .post {
-  background: rgba(255,255,255,0.9);
-  padding: 24px;
-  margin-bottom: 24px;
+  background: rgba(255,255,255,0.92);
+  padding: 28px;
+  margin-bottom: 26px;
 }
 
 .category {
@@ -83,13 +74,13 @@ body {
   letter-spacing: 1px;
 }
 
-.post h3 {
+.post h2 {
   margin: 10px 0;
   font-size: 26px;
 }
 
 .meta {
-  color: #777;
+  color: #666;
   font-size: 14px;
 }
 
@@ -101,10 +92,10 @@ body {
   }
 
   .nav-menu {
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
-  .hero h2 {
-    font-size: 32px;
+  .brand h1 {
+    font-size: 22px;
   }
 }
