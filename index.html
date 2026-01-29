@@ -8,61 +8,50 @@
 </head>
 <body>
 
-<header>
-  <div class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="VoxLittera">
-      <span>VoxLittera</span>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="logo.png" alt="VoxLittera Logo" class="logo">
+      <div class="brand-text">
+        <h1>VoxLittera</h1>
+        <p>Ruang Opini, Cerpen, dan Puisi</p>
+      </div>
     </div>
 
-    <nav class="menu">
-      <a href="#" onclick="filterPosts('all')">Semua</a>
-      <a href="#" onclick="filterPosts('opini')">Opini</a>
-      <a href="#" onclick="filterPosts('cerpen')">Cerpen</a>
-      <a href="#" onclick="filterPosts('puisi')">Puisi</a>
+    <nav class="nav-menu">
+      <a href="#" class="active">Semua</a>
+      <a href="#">Opini</a>
+      <a href="#">Cerpen</a>
+      <a href="#">Puisi</a>
       <a href="#">Tentang</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <h1>VoxLittera</h1>
-  <p>Ruang Opini, Cerpen, dan Puisi</p>
-</section>
+  <!-- HERO (HITAM) -->
+  <section class="hero">
+    <h2>VoxLittera</h2>
+  </section>
 
-<section class="content">
+  <!-- KONTEN -->
+  <main class="content">
+    <article class="post opini">
+      <span class="category">OPINI</span>
+      <h3>Demokrasi dan Sunyi yang Kita Pelihara</h3>
+      <p class="meta">Oleh Koteng • 29 Januari 2026</p>
+    </article>
 
-  <article class="post" data-kategori="opini">
-    <span class="tag opini">Opini</span>
-    <h2>Demokrasi dan Sunyi yang Kita Pelihara</h2>
-    <p class="meta">Oleh Koteng • 29 Januari 2026</p>
-  </article>
+    <article class="post cerpen">
+      <span class="category">CERPEN</span>
+      <h3>Di Ujung Malam, Aku Menunggumu</h3>
+      <p class="meta">Oleh Anonim • 28 Januari 2026</p>
+    </article>
 
-  <article class="post" data-kategori="cerpen">
-    <span class="tag cerpen">Cerpen</span>
-    <h2>Di Ujung Malam, Aku Menunggumu</h2>
-    <p class="meta">Oleh Anonim • 28 Januari 2026</p>
-  </article>
-
-  <article class="post" data-kategori="puisi">
-    <span class="tag puisi">Puisi</span>
-    <h2>Surat untuk Hujan yang Tidak Jadi Turun</h2>
-    <p class="meta">Oleh VoxLittera • 27 Januari 2026</p>
-  </article>
-
-</section>
-  
-<script>
-function filterPosts(kategori) {
-  const posts = document.querySelectorAll('.post');
-
-  posts.forEach(post => {
-    const jenis = post.dataset.kategori;
-    post.style.display =
-      kategori === 'all' || jenis === kategori ? 'block' : 'none';
-  });
-}
-</script>
+    <article class="post puisi">
+      <span class="category">PUISI</span>
+      <h3>Surat untuk Hujan yang Tidak Jadi Turun</h3>
+      <p class="meta">Oleh VoxLittera • 27 Januari 2026</p>
+    </article>
+  </main>
 
 </body>
 </html>
