@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: "Georgia", serif;
-      background-color: #0f0f0f;
+      background: linear-gradient(180deg, #0b0b0b, #141414);
       color: #ddd;
     }
 
@@ -19,53 +19,70 @@
       justify-content: space-between;
       align-items: center;
       padding: 14px 40px;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid #222;
+      background-color: #0f0f0f;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .brand img {
-      height: 42px;
+      height: 36px;
     }
 
     .brand span {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
-      color: #c9a24d;
+      color: #2bb7a9;
       letter-spacing: 1px;
     }
 
     .menu a {
-      margin-left: 26px;
+      margin-left: 22px;
       text-decoration: none;
-      color: #ddd;
-      font-size: 15px;
+      color: #ccc;
+      font-size: 14px;
       letter-spacing: 0.5px;
-      transition: color 0.3s;
+      transition: color 0.3s, border-bottom 0.3s;
+      padding-bottom: 4px;
     }
 
     .menu a:hover {
-      color: #c9a24d;
+      color: #2bb7a9;
+      border-bottom: 1px solid #2bb7a9;
     }
 
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
+    /* CONTENT */
+    .content {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
     }
 
-    .hero h1 {
-      font-size: 46px;
-      color: #c9a24d;
-      margin-bottom: 10px;
+    .post {
+      border-bottom: 1px solid #222;
+      padding: 18px 0;
     }
 
-    .hero p {
-      font-size: 18px;
+    .post span {
+      font-size: 12px;
+      color: #2bb7a9;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .post h2 {
+      margin: 6px 0;
+      font-size: 22px;
+      color: #eee;
+    }
+
+    .post p {
+      margin: 0;
+      font-size: 14px;
       color: #aaa;
     }
   </style>
@@ -76,11 +93,12 @@
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="brand">
-      <img src="logo.png" alt="VoxLittera Logo">
+      <img src="logo.png" alt="VoxLittera">
       <span>VoxLittera</span>
     </div>
 
     <div class="menu">
+      <a href="#">Semua</a>
       <a href="#">Opini</a>
       <a href="#">Cerpen</a>
       <a href="#">Puisi</a>
@@ -88,10 +106,27 @@
     </div>
   </div>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>VoxLittera</h1>
-    <p>Ruang Opini, Cerpen, dan Puisi.</p>
+  <!-- DAFTAR KARYA -->
+  <div class="content">
+
+    <div class="post">
+      <span>Opini</span>
+      <h2>Demokrasi dan Sunyi yang Kita Pelihara</h2>
+      <p>Oleh Koteng • 29 Januari 2026</p>
+    </div>
+
+    <div class="post">
+      <span>Cerpen</span>
+      <h2>Di Ujung Malam, Aku Menunggumu</h2>
+      <p>Oleh Anonim • 28 Januari 2026</p>
+    </div>
+
+    <div class="post">
+      <span>Puisi</span>
+      <h2>Surat untuk Hujan yang Tidak Jadi Turun</h2>
+      <p>Oleh VoxLittera • 27 Januari 2026</p>
+    </div>
+
   </div>
 
 </body>
