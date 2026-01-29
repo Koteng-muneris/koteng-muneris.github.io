@@ -2,130 +2,109 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Georgia, serif;
+  font-family: "Georgia", serif;
+}
+
+body {
+  background-color: #f5f5f5;
 }
 
 /* NAVBAR */
-header {
-  background-color: #2fb7a3;
-  padding: 18px 60px;
-}
-
 .navbar {
+  background-color: #2fb3a2;
+  color: white;
+  padding: 14px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
+.nav-left {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 26px;
-  font-weight: bold;
-  color: white;
+  gap: 12px;
 }
 
-.logo img {
-  height: 34px;
+.logo {
+  height: 40px;
 }
 
-.menu a {
-  margin-left: 28px;
-  font-size: 18px;
+.brand-text h1 {
+  font-size: 20px;
+}
+
+.brand-text p {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.nav-menu a {
   color: white;
   text-decoration: none;
+  margin-left: 20px;
+  font-size: 15px;
 }
 
-.menu a:hover {
-  opacity: 0.8;
+.nav-menu a:hover,
+.nav-menu a.active {
+  text-decoration: underline;
 }
 
-/* HERO ATAS */
+/* HERO */
 .hero {
-  background-color: #111;
+  background: #111;
   color: #d4af37;
   text-align: center;
   padding: 80px 20px;
 }
 
-.hero h1 {
+.hero h2 {
   font-size: 42px;
 }
 
-.hero p {
-  margin-top: 10px;
-  color: #ccc;
-}
-
-/* CONTENT DENGAN BACKGROUND FOTO */
+/* CONTENT */
 .content {
-  min-height: 120vh;
-  background-image: url("bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 60px;
+  max-width: 900px;
+  margin: -40px auto 60px;
+  padding: 40px;
+  background: url("bg.png") no-repeat center/cover;
+  border-radius: 6px;
 }
 
-/* POST */
 .post {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 25px;
-  margin-bottom: 30px;
-  max-width: 720px;
-  border-radius: 4px;
+  background: rgba(255,255,255,0.9);
+  padding: 24px;
+  margin-bottom: 24px;
 }
 
-.post h2 {
+.category {
+  color: #2fb3a2;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.post h3 {
   margin: 10px 0;
   font-size: 26px;
 }
 
 .meta {
-  font-size: 14px;
   color: #777;
+  font-size: 14px;
 }
 
-/* TAG */
-.tag {
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.opini { color: #2fb7a3; }
-.cerpen { color: #b88b2e; }
-.puisi { color: #555; }
-
-/* RESPONSIVE HP */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-  }
-
   .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .menu {
+  .nav-menu {
     margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
   }
 
-  .menu a {
-    margin-left: 0;
-    font-size: 16px;
-  }
-
-  .content {
-    padding: 30px 20px;
-  }
-
-  .hero h1 {
+  .hero h2 {
     font-size: 32px;
   }
 }
