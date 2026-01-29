@@ -1,96 +1,106 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>VoxLittera</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>VoxLittera</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Georgia", serif;
-      background: linear-gradient(180deg, #0b0b0b, #141414);
-      color: #ddd;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+}
 
-    /* NAVBAR */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 40px;
-      border-bottom: 1px solid #222;
-      background-color: #0f0f0f;
-    }
+/* ===== HEADER ATAS ===== */
+.header {
+  background-color: #2bb7a9;
+  padding: 14px 40px;
+}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .brand img {
-      height: 36px;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    .brand span {
-      font-size: 20px;
-      font-weight: bold;
-      color: #2bb7a9;
-      letter-spacing: 1px;
-    }
+.brand img {
+  height: 36px;
+}
 
-    .menu a {
-      margin-left: 22px;
-      text-decoration: none;
-      color: #ccc;
-      font-size: 14px;
-      letter-spacing: 0.5px;
-      transition: color 0.3s, border-bottom 0.3s;
-      padding-bottom: 4px;
-    }
+.brand span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
 
-    .menu a:hover {
-      color: #2bb7a9;
-      border-bottom: 1px solid #2bb7a9;
-    }
+.menu a {
+  margin-left: 22px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
 
-    /* CONTENT */
-    .content {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
+.menu a:hover {
+  text-decoration: underline;
+}
 
-    .post {
-      border-bottom: 1px solid #222;
-      padding: 18px 0;
-    }
+/* ===== CONTENT DENGAN FOTO ===== */
+.content {
+  background-image: url("bg.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
 
-    .post span {
-      font-size: 12px;
-      color: #2bb7a9;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+.overlay {
+  background-color: rgba(0,0,0,0.65);
+  min-height: 100vh;
+  padding: 60px 20px;
+}
 
-    .post h2 {
-      margin: 6px 0;
-      font-size: 22px;
-      color: #eee;
-    }
+.container {
+  max-width: 900px;
+  margin: auto;
+  color: #eee;
+}
 
-    .post p {
-      margin: 0;
-      font-size: 14px;
-      color: #aaa;
-    }
-  </style>
+.post {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 18px 0;
+}
+
+.post span {
+  font-size: 12px;
+  color: #2bb7a9;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.post h2 {
+  margin: 6px 0;
+  font-size: 22px;
+}
+
+.post p {
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+<!-- HEADER -->
+<div class="header">
   <div class="navbar">
     <div class="brand">
       <img src="logo.png" alt="VoxLittera">
@@ -105,29 +115,34 @@
       <a href="#">Tentang</a>
     </div>
   </div>
+</div>
 
-  <!-- DAFTAR KARYA -->
-  <div class="content">
+<!-- CONTENT -->
+<div class="content">
+  <div class="overlay">
+    <div class="container">
 
-    <div class="post">
-      <span>Opini</span>
-      <h2>Demokrasi dan Sunyi yang Kita Pelihara</h2>
-      <p>Oleh Koteng • 29 Januari 2026</p>
+      <div class="post">
+        <span>Opini</span>
+        <h2>Demokrasi dan Sunyi yang Kita Pelihara</h2>
+        <p>Oleh Koteng • 29 Januari 2026</p>
+      </div>
+
+      <div class="post">
+        <span>Cerpen</span>
+        <h2>Di Ujung Malam, Aku Menunggumu</h2>
+        <p>Oleh Anonim • 28 Januari 2026</p>
+      </div>
+
+      <div class="post">
+        <span>Puisi</span>
+        <h2>Surat untuk Hujan yang Tidak Jadi Turun</h2>
+        <p>Oleh VoxLittera • 27 Januari 2026</p>
+      </div>
+
     </div>
-
-    <div class="post">
-      <span>Cerpen</span>
-      <h2>Di Ujung Malam, Aku Menunggumu</h2>
-      <p>Oleh Anonim • 28 Januari 2026</p>
-    </div>
-
-    <div class="post">
-      <span>Puisi</span>
-      <h2>Surat untuk Hujan yang Tidak Jadi Turun</h2>
-      <p>Oleh VoxLittera • 27 Januari 2026</p>
-    </div>
-
   </div>
+</div>
 
 </body>
 </html>
