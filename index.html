@@ -2,51 +2,42 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>VoxLittera – Ruang Opini, Cerpen, dan Puisi</title>
+  <title>VoxLittera</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="brand">
     <img src="logo.png" alt="VoxLittera">
-    <strong>VoxLittera</strong>
+    <span>VoxLittera</span>
   </div>
-
   <nav>
-    <a href="#" class="active" data-filter="all">Semua</a>
-    <a href="#" data-filter="opini">Opini</a>
-    <a href="#" data-filter="cerpen">Cerpen</a>
-    <a href="#" data-filter="puisi">Puisi</a>
-    <a href="#">Tentang</a>
+    <a href="#" class="active">Semua</a>
+    <a href="#">Opini</a>
+    <a href="#">Cerpen</a>
+    <a href="#">Puisi</a>
   </nav>
 </header>
 
-<!-- BACKGROUND FULL -->
 <section class="news-section">
-
   <div class="news-grid">
 
-    <!-- POST CERPEN -->
-    <div class="card" data-category="cerpen">
-      <img src="images/cerpen1.png" alt="Cerpen">
-
-      <div class="content">
-        <span class="tag">Cerpen</span>
-        <h3>
-          <a href="posts/cerpen-ujung-malam.html">
-            “Adrian,” ucapnya lembut, “Tuhan tidak pernah marah pada hati yang jujur. Tapi biara ini adalah tempat untuk mereka yang hatinya utuh di sini
-          </a>
-        </h3>
-        <p>Koteng • 29 Januari 2026</p>
+    <!-- CARD CERPEN -->
+    <a href="posts/cerpen-ujung-malam.html" class="post-card-link">
+      <div class="post-card">
+        <img src="images/cerpen1.png" alt="Cerpen">
+        <div class="post-info">
+          <span class="post-category">Cerpen</span>
+          <h2>Doa yang Tak Pernah Selesai</h2>
+          <p class="post-meta">Koteng • 30 Januari 2026</p>
+          <p>Cerita tentang sunyi, iman, dan cinta yang tak meminta untuk dimiliki.</p>
+        </div>
       </div>
-    </div>
+    </a>
 
   </div>
-
 </section>
 
 <script src="script.js"></script>
