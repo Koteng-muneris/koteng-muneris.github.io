@@ -43,7 +43,7 @@ body {
 
 /* BACKGROUND FULL */
 .news-section {
-  background: url("bg.jpg") center/cover no-repeat;
+  background: url("bg.png") center/cover no-repeat;
   min-height: 100vh;
   padding: 60px 20px;
 }
