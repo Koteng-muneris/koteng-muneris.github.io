@@ -2,62 +2,51 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <title>VoxLittera – Ruang Opini, Cerpen, dan Puisi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VoxLittera</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
   <div class="brand">
-    <img src="logo.png" alt="logo">
-    <span>VoxLittera</span>
+    <img src="logo.png" alt="VoxLittera">
+    <strong>VoxLittera</strong>
   </div>
 
   <nav>
-    <a href="#" class="filter active" data-filter="all">Semua</a>
-    <a href="#" class="filter" data-filter="opini">Opini</a>
-    <a href="#" class="filter" data-filter="cerpen">Cerpen</a>
-    <a href="#" class="filter" data-filter="puisi">Puisi</a>
+    <a href="#" class="active" data-filter="all">Semua</a>
+    <a href="#" data-filter="opini">Opini</a>
+    <a href="#" data-filter="cerpen">Cerpen</a>
+    <a href="#" data-filter="puisi">Puisi</a>
     <a href="#">Tentang</a>
   </nav>
 </header>
 
+<!-- BACKGROUND FULL -->
 <section class="news-section">
+
   <div class="news-grid">
 
-    <article class="card opini">
-      <span class="tag">Opini</span>
-      <h3>Demokrasi dan Sunyi yang Kita Pelihara</h3>
-      <p>Oleh Koteng • 29 Januari 2026</p>
-    </article>
+    <!-- POST CERPEN -->
+    <div class="card" data-category="cerpen">
+      <img src="images/cerpen1.png" alt="Cerpen">
 
-<article class="card cerpen">
-  <a href="posts/cerpen-ujung-malam.html">
-    <img src="images/cerpen1.png" alt="Cerpen">
-    <div class="card-content">
-      <span class="tag">Cerpen</span>
-      <h3>Doa Yang Tak Pernah Selesai</h3>
-      <p>Oleh Koteng • 30 Januari 2026</p>
+      <div class="content">
+        <span class="tag">Cerpen</span>
+        <h3>
+          <a href="posts/cerpen-ujung-malam.html">
+            “Adrian,” ucapnya lembut, “Tuhan tidak pernah marah pada hati yang jujur. Tapi biara ini adalah tempat untuk mereka yang hatinya utuh di sini
+          </a>
+        </h3>
+        <p>Koteng • 29 Januari 2026</p>
+      </div>
     </div>
-  </a>
-</article>
-
-
-
-    <article class="card puisi">
-      <span class="tag">Puisi</span>
-      <h3>Surat untuk Hujan yang Tidak Jadi Turun</h3>
-      <p>Oleh VoxLittera • 27 Januari 2026</p>
-    </article>
-
-    <article class="card opini">
-      <span class="tag">Opini</span>
-      <h3>Suara yang Tidak Pernah Diberi Mikrofon</h3>
-      <p>Oleh Redaksi • 26 Januari 2026</p>
-    </article>
 
   </div>
+
 </section>
 
 <script src="script.js"></script>
