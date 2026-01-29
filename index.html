@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>VoxLittera</title>
+  <title>VoxLittera – Ruang Opini, Cerpen, dan Puisi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,28 +14,29 @@
     <span>VoxLittera</span>
   </div>
   <nav>
-    <a href="#" class="active">Semua</a>
-    <a href="#">Opini</a>
-    <a href="#">Cerpen</a>
-    <a href="#">Puisi</a>
+    <a href="#" class="active" data-filter="all">Semua</a>
+    <a href="#" data-filter="opini">Opini</a>
+    <a href="#" data-filter="cerpen">Cerpen</a>
+    <a href="#" data-filter="puisi">Puisi</a>
   </nav>
 </header>
 
 <section class="news-section">
   <div class="news-grid">
 
-    <!-- CARD CERPEN -->
-    <a href="posts/cerpen-ujung-malam.html" class="post-card-link">
-      <div class="post-card">
-        <img src="images/cerpen1.png" alt="Cerpen">
-        <div class="post-info">
-          <span class="post-category">Cerpen</span>
-          <h2>Doa yang Tak Pernah Selesai</h2>
-          <p class="post-meta">Koteng • 30 Januari 2026</p>
-          <p>Cerita tentang sunyi, iman, dan cinta yang tak meminta untuk dimiliki.</p>
-        </div>
+    <!-- POST -->
+    <div class="post-card" data-category="cerpen">
+      <img src="images/cerpen1.png" alt="Cerpen">
+      <div class="post-info">
+        <span class="post-category">Cerpen</span>
+        <h2>
+          <a href="posts/cerpen-ujung-malam.html">
+            Doa Yang Tak Pernah Selesai
+          </a>
+        </h2>
+        <p class="post-meta">Koteng • 30 Januari 2026</p>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
