@@ -22,17 +22,17 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: white;
+  color: #fff;
   font-size: 22px;
 }
 
 .brand img {
-  height: 40px;
+  height: 42px;
 }
 
 .navbar nav a {
   color: white;
-  margin-left: 20px;
+  margin-left: 22px;
   text-decoration: none;
 }
 
@@ -40,7 +40,7 @@ body {
   text-decoration: underline;
 }
 
-/* BACKGROUND FULL */
+/* BACKGROUND */
 .news-section {
   background: url("bg.png") center/cover no-repeat;
   min-height: 100vh;
@@ -51,30 +51,20 @@ body {
 .news-grid {
   max-width: 1100px;
   margin: auto;
+  display: grid;
+  gap: 22px;
 }
 
-/* LINK */
-.post-card-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* CARD */
+/* CARD LIST STYLE */
 .post-card {
   display: flex;
   gap: 16px;
   background: #fff;
-  padding: 16px;
-  margin-bottom: 18px;
+  padding: 14px;
   border-radius: 8px;
-  transition: transform .2s;
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
 }
 
-.post-card:hover {
-  transform: translateY(-4px);
-}
-
-/* THUMBNAIL KECIL */
 .post-card img {
   width: 180px;
   height: 120px;
@@ -82,70 +72,23 @@ body {
   border-radius: 6px;
 }
 
-/* INFO */
 .post-info h2 {
   font-size: 20px;
   margin: 6px 0;
 }
 
+.post-info a {
+  color: #111;
+  text-decoration: none;
+}
+
 .post-category {
   font-size: 12px;
-  color: #2fb3a2;
+  color: #1aa89c;
   font-weight: bold;
 }
 
 .post-meta {
   font-size: 13px;
-  color: #777;
-}
-
-/* POST PAGE */
-.post {
-  max-width: 800px;
-  margin: 40px auto;
-  background: white;
-}
-
-.post-image {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-}
-
-.post-content {
-  padding: 32px;
-}
-
-.post-content h1 {
-  font-size: 30px;
-  margin: 10px 0;
-}
-
-.post-content p {
-  font-size: 16px;
-  line-height: 1.9;
-  margin-bottom: 18px;
-}
-
-.post-footer a {
-  color: #2fb3a2;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .post-card {
-    flex-direction: column;
-  }
-
-  .post-card img {
-    width: 100%;
-    height: 180px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  color: #666;
 }
