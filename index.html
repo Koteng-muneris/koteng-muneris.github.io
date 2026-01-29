@@ -8,49 +8,51 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
-  <div class="nav-left">
-    <img src="logo.png" class="logo">
-    <div class="brand">
-      <h1>VoxLittera</h1>
-      <span>Ruang Opini, Cerpen, dan Puisi</span>
-    </div>
+  <div class="brand">
+    <img src="logo.png" alt="logo">
+    <span>VoxLittera</span>
   </div>
 
-  <nav class="nav-menu">
-    <a href="#" class="active">Semua</a>
-    <a href="#">Opini</a>
-    <a href="#">Cerpen</a>
-    <a href="#">Puisi</a>
+  <nav>
+    <a href="#" class="filter active" data-filter="all">Semua</a>
+    <a href="#" class="filter" data-filter="opini">Opini</a>
+    <a href="#" class="filter" data-filter="cerpen">Cerpen</a>
+    <a href="#" class="filter" data-filter="puisi">Puisi</a>
     <a href="#">Tentang</a>
   </nav>
 </header>
 
-<!-- BACKGROUND FOTO -->
-<section class="bg-section">
-  <div class="content">
+<section class="news-section">
+  <div class="news-grid">
 
-    <article class="post">
-      <span class="category">OPINI</span>
-      <h2>Demokrasi dan Sunyi yang Kita Pelihara</h2>
-      <p class="meta">Oleh Koteng • 29 Januari 2026</p>
+    <article class="card opini">
+      <span class="tag">Opini</span>
+      <h3>Demokrasi dan Sunyi yang Kita Pelihara</h3>
+      <p>Oleh Koteng • 29 Januari 2026</p>
     </article>
 
-    <article class="post">
-      <span class="category">CERPEN</span>
-      <h2>Di Ujung Malam, Aku Menunggumu</h2>
-      <p class="meta">Oleh Anonim • 28 Januari 2026</p>
+    <article class="card cerpen">
+      <span class="tag">Cerpen</span>
+      <h3>Di Ujung Malam, Aku Menunggumu</h3>
+      <p>Oleh Anonim • 28 Januari 2026</p>
     </article>
 
-    <article class="post">
-      <span class="category">PUISI</span>
-      <h2>Surat untuk Hujan yang Tidak Jadi Turun</h2>
-      <p class="meta">Oleh VoxLittera • 27 Januari 2026</p>
+    <article class="card puisi">
+      <span class="tag">Puisi</span>
+      <h3>Surat untuk Hujan yang Tidak Jadi Turun</h3>
+      <p>Oleh VoxLittera • 27 Januari 2026</p>
+    </article>
+
+    <article class="card opini">
+      <span class="tag">Opini</span>
+      <h3>Suara yang Tidak Pernah Diberi Mikrofon</h3>
+      <p>Oleh Redaksi • 26 Januari 2026</p>
     </article>
 
   </div>
 </section>
 
+<script src="script.js"></script>
 </body>
 </html>
