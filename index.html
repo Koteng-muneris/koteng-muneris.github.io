@@ -108,41 +108,48 @@ body {
     </div>
 
     <div class="menu">
-      <a href="#">Semua</a>
-      <a href="#">Opini</a>
-      <a href="#">Cerpen</a>
-      <a href="#">Puisi</a>
+      <a href="#" onclick="filterPosts('all')">Semua</a>
+      <a href="#" onclick="filterPosts('opini')">Opini</a>
+      <a href="#" onclick="filterPosts('cerpen')">Cerpen</a>
+      <a href="#" onclick="filterPosts('puisi')">Puisi</a>
       <a href="#">Tentang</a>
     </div>
   </div>
 </div>
 
 <!-- CONTENT -->
-<div class="content">
-  <div class="overlay">
-    <div class="container">
-
-      <div class="post">
-        <span>Opini</span>
-        <h2>Demokrasi dan Sunyi yang Kita Pelihara</h2>
-        <p>Oleh Koteng • 29 Januari 2026</p>
-      </div>
-
-      <div class="post">
-        <span>Cerpen</span>
-        <h2>Di Ujung Malam, Aku Menunggumu</h2>
-        <p>Oleh Anonim • 28 Januari 2026</p>
-      </div>
-
-      <div class="post">
-        <span>Puisi</span>
-        <h2>Surat untuk Hujan yang Tidak Jadi Turun</h2>
-        <p>Oleh VoxLittera • 27 Januari 2026</p>
-      </div>
-
-    </div>
-  </div>
+<div class="post" data-kategori="opini">
+  <span>Opini</span>
+  <h2>Demokrasi dan Sunyi yang Kita Pelihara</h2>
+  <p>Oleh Koteng • 29 Januari 2026</p>
 </div>
+
+<div class="post" data-kategori="cerpen">
+  <span>Cerpen</span>
+  <h2>Di Ujung Malam, Aku Menunggumu</h2>
+  <p>Oleh Anonim • 28 Januari 2026</p>
+</div>
+
+<div class="post" data-kategori="puisi">
+  <span>Puisi</span>
+  <h2>Surat untuk Hujan yang Tidak Jadi Turun</h2>
+  <p>Oleh VoxLittera • 27 Januari 2026</p>
+</div>
+<script>
+function filterPosts(kategori) {
+  const posts = document.querySelectorAll('.post');
+
+  posts.forEach(post => {
+    const postKategori = post.getAttribute('data-kategori');
+
+    if (kategori === 'all' || postKategori === kategori) {
+      post.style.display = 'block';
+    } else {
+      post.style.display = 'none';
+    }
+  });
+}
+</script>
 
 </body>
 </html>
