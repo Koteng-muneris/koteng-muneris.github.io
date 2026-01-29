@@ -1,18 +1,18 @@
-const filters = document.querySelectorAll(".filter");
+const filterLinks = document.querySelectorAll(".navbar nav a[data-filter]");
 const cards = document.querySelectorAll(".card");
 
-filters.forEach(filter => {
-  filter.addEventListener("click", e => {
+filterLinks.forEach(link => {
+  link.addEventListener("click", e => {
     e.preventDefault();
 
-    filters.forEach(f => f.classList.remove("active"));
-    filter.classList.add("active");
+    filterLinks.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
 
-    const category = filter.dataset.filter;
+    const filter = link.dataset.filter;
 
     cards.forEach(card => {
-      if (category === "all" || card.classList.contains(category)) {
-        card.style.display = "block";
+      if (filter === "all" || card.dataset.category === filter) {
+        card.style.display = "flex";
       } else {
         card.style.display = "none";
       }
