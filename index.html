@@ -1,152 +1,65 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>VoxLittera</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-  margin: 0;
-  font-family: "Georgia", serif;
-}
-
-/* ===== HEADER ATAS ===== */
-.header {
-  background-color: #2bb7a9;
-  padding: 14px 40px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.brand img {
-  height: 36px;
-}
-
-.brand span {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffffff;
-  letter-spacing: 1px;
-}
-
-.menu a {
-  margin-left: 22px;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-}
-
-.menu a:hover {
-  text-decoration: underline;
-}
-
-/* ===== CONTENT DENGAN FOTO ===== */
-.content {
-  background-image: url("bg.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-}
-
-.overlay {
-  background-color: rgba(0,0,0,0.65);
-  min-height: 100vh;
-  padding: 60px 20px;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  color: #eee;
-}
-
-.post {
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding: 18px 0;
-}
-
-.post span {
-  font-size: 12px;
-  color: #2bb7a9;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.post h2 {
-  margin: 6px 0;
-  font-size: 22px;
-}
-
-.post p {
-  margin: 0;
-  font-size: 14px;
-  color: #ccc;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoxLittera</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
-<div class="header">
+<header>
   <div class="navbar">
-    <div class="brand">
+    <div class="logo">
       <img src="logo.png" alt="VoxLittera">
       <span>VoxLittera</span>
     </div>
 
-    <div class="menu">
+    <nav class="menu">
       <a href="#" onclick="filterPosts('all')">Semua</a>
       <a href="#" onclick="filterPosts('opini')">Opini</a>
       <a href="#" onclick="filterPosts('cerpen')">Cerpen</a>
       <a href="#" onclick="filterPosts('puisi')">Puisi</a>
       <a href="#">Tentang</a>
-    </div>
+    </nav>
   </div>
-</div>
+</header>
 
-<!-- CONTENT -->
-<div class="post" data-kategori="opini">
-  <span>Opini</span>
-  <h2>Demokrasi dan Sunyi yang Kita Pelihara</h2>
-  <p>Oleh Koteng • 29 Januari 2026</p>
-</div>
+<section class="hero">
+  <h1>VoxLittera</h1>
+  <p>Ruang Opini, Cerpen, dan Puisi</p>
+</section>
 
-<div class="post" data-kategori="cerpen">
-  <span>Cerpen</span>
-  <h2>Di Ujung Malam, Aku Menunggumu</h2>
-  <p>Oleh Anonim • 28 Januari 2026</p>
-</div>
+<section class="content">
 
-<div class="post" data-kategori="puisi">
-  <span>Puisi</span>
-  <h2>Surat untuk Hujan yang Tidak Jadi Turun</h2>
-  <p>Oleh VoxLittera • 27 Januari 2026</p>
-</div>
+  <article class="post" data-kategori="opini">
+    <span class="tag opini">Opini</span>
+    <h2>Demokrasi dan Sunyi yang Kita Pelihara</h2>
+    <p class="meta">Oleh Koteng • 29 Januari 2026</p>
+  </article>
+
+  <article class="post" data-kategori="cerpen">
+    <span class="tag cerpen">Cerpen</span>
+    <h2>Di Ujung Malam, Aku Menunggumu</h2>
+    <p class="meta">Oleh Anonim • 28 Januari 2026</p>
+  </article>
+
+  <article class="post" data-kategori="puisi">
+    <span class="tag puisi">Puisi</span>
+    <h2>Surat untuk Hujan yang Tidak Jadi Turun</h2>
+    <p class="meta">Oleh VoxLittera • 27 Januari 2026</p>
+  </article>
+
+</section>
+  
 <script>
 function filterPosts(kategori) {
   const posts = document.querySelectorAll('.post');
 
   posts.forEach(post => {
-    const postKategori = post.getAttribute('data-kategori');
-
-    if (kategori === 'all' || postKategori === kategori) {
-      post.style.display = 'block';
-    } else {
-      post.style.display = 'none';
-    }
+    const jenis = post.dataset.kategori;
+    post.style.display =
+      kategori === 'all' || jenis === kategori ? 'block' : 'none';
   });
 }
 </script>
